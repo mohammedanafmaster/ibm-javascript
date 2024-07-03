@@ -17,3 +17,11 @@ function checkCountValue() {
 function displayCount() {
     document.getElementById("countDisplay").innerHTML = count;
 }
+
+// Practice task
+
+function resetCount() {
+    count = 0;
+    displayCount();
+    alert("Followers count has been reset");
+}
