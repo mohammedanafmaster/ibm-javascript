@@ -27,6 +27,24 @@ const functionConst = "I'm a block-scoped const";
 }
 show();
 
-console.log(functionVar); // Throws ReferenceError
-console.log(functionLet); // Throws ReferenceError
-console.log(functionConst); // Throws ReferenceError
+// console.log(functionVar); // Throws ReferenceError
+// console.log(functionLet); // Throws ReferenceError
+// console.log(functionConst); // Throws ReferenceError
+
+{
+    var practiceVar = "I'm a practice var";
+    let practiceLet = "I'm a practice let";
+    const practiceConst = "I'm a practice const";
+
+    practiceVar = "I'm a reassigned practice var";
+    practiceLet = "I'm a reassigned practice let";
+    // practiceConst = "I'm a reassigned practice const";
+}
+
+practiceVar = "I'm a reassigned practice var";
+practiceLet = "I'm a reassigned practice let";
+practiceConst = "I'm a reassigned practice const";
+
+console.log(practiceVar);
+console.log(practiceLet);
+console.log(practiceConst);
