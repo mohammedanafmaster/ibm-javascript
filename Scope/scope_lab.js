@@ -31,6 +31,7 @@ show();
 // console.log(functionLet); // Throws ReferenceError
 // console.log(functionConst); // Throws ReferenceError
 
+// Practice task
 {
     var practiceVar = "I'm a practice var";
     let practiceLet = "I'm a practice let";
