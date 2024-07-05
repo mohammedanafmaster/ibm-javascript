@@ -35,6 +35,7 @@ clearCompletedBtn.addEventListener('click', () => {
     displayTasks();
 })
 
+// Practice task
 clearAllTasks.addEventListener('click', (index) => {
     tasks.splice(index);
     displayTasks();
