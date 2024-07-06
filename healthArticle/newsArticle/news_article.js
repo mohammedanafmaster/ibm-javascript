@@ -1,28 +1,29 @@
-let xhr = new XMLHttpRequest();
+var xhr = new XMLHttpRequest();
 
-xhr.open('GET', "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=API_KEY", true);
-
+xhr.open('GET', "./news_article.json", true);
 xhr.responseType = 'json';
 
 xhr.onload = function() {
-    let articles = xhr.response.articles;
-    let articlesDiv = document.getElementById('articles');
+    var articles = xhr.response.articles;
+
+    var articlesDiv = document.getElementById('articles');
     
     articles.forEach(function(article) {
-        let articleDiv = document.createElement('div');
+        var articleDiv = document.createElement('div');
         articleDiv.classList.add('article');
 
-        let author = document.createElement('h4');
+        var author = document.createElement('h4');
         author.textContent = article.author;
 
-        let title = document.createElement('h2');
+        var title = document.createElement('h2');
         title.textContent = article.title;
 
-        let description = document.createElement('p');
+        var description = document.createElement('p');
         description.textContent = article.description;
 
-        let link = document.createElement('a');
-        link.setAttribute("href", `${link.url}`);
+        var link = document.createElement('a');
+        link.setAttribute("href", `${article.url}`);
+        link.textContent = "Read more..."
 
         articleDiv.appendChild(author);
         articleDiv.appendChild(title);
