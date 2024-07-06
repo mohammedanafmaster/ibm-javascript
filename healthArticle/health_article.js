@@ -1,6 +1,6 @@
 var xhr = new XMLHttpRequest();
 
-xhr.open('GET', "./health.json", true);
+xhr.open('GET', "./health_article.json", true);
 xhr.responseType = 'json';
 
 xhr.onload = function() {
@@ -32,7 +32,7 @@ xhr.onload = function() {
         benefitsHeader.textContent = "Benefits:";
 
         var benefitsList = document.createElement('ul');
-        articles.benefits.forEach(function(benefit){
+        article.benefits.forEach(function(benefit){
             var listItem = document.createElement('li');
             listItem.textContent = benefit;
             benefitsList.appendChild(listItem);
